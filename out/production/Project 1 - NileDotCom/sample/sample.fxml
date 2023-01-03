@@ -1,0 +1,53 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TextField?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10" style="-fx-background-color: #000000">
+
+    <GridPane alignment="TOP_CENTER" vgap="10">
+        <GridPane GridPane.rowIndex="0" hgap="10" alignment="BASELINE_RIGHT">
+            <Label GridPane.columnIndex="0" textFill="gold" fx:id="ItemID">Enter item ID for Item #1: <!--Dynamic number change here--></Label>
+            <TextField GridPane.columnIndex="1" minWidth="400" fx:id="UserItemID"/>
+        </GridPane>
+        <GridPane GridPane.rowIndex="1" hgap="10" alignment="BASELINE_RIGHT">
+            <Label GridPane.rowIndex="0" textFill="gold" fx:id="Quantity">Enter quantity for Item #1: <!--Dynamic number change here--></Label>
+            <TextField GridPane.columnIndex="1" minWidth="400" fx:id="UserQuantity"/>
+        </GridPane>
+        <GridPane GridPane.rowIndex="2" hgap="10" alignment="BASELINE_RIGHT">
+            <Label GridPane.rowIndex="0" textFill="gold" fx:id="Details">Details for Item #1: <!--Dynamic number change here--></Label>
+            <TextField GridPane.columnIndex="1" minWidth="400" fx:id="UserDetails" editable="false"/>
+        </GridPane>
+        <GridPane GridPane.rowIndex="3" hgap="10" alignment="BASELINE_RIGHT">
+            <Label GridPane.rowIndex="0" textFill="gold" fx:id="OrderSubtotal">Order subtotal for 0 item(s): <!--Dynamic number change here--></Label>
+            <TextField GridPane.columnIndex="1" minWidth="400" fx:id="UserSubtotal" editable="false"/>
+        </GridPane>
+        <ButtonBar GridPane.rowIndex="4" GridPane.rowSpan="5">
+            <buttons>
+                <Button fx:id="ProcessItem" onAction="#process">
+                    Process Item #1 <!--Dynamic number change here-->
+                </Button>
+                <Button fx:id="ConfirmItem" onAction="#confirm" disable="true">
+                    Confirm Item #1 <!--Dynamic number change here-->
+                </Button>
+                <Button fx:id="ViewOrder" disable="true" onAction="#viewOrder">
+                    View Order
+                </Button>
+                <Button fx:id="FinishOrder" disable="true" onAction="#finishOrder">
+                    Finish Order
+                </Button>
+                <Button fx:id="NewOrder" onAction="#newOrder">
+                    New Order
+                </Button>
+                <Button fx:id="Exit" onAction="#exit">
+                    Exit
+                </Button>
+            </buttons>
+        </ButtonBar>
+    </GridPane>
+</GridPane>
